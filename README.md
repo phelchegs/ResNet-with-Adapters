@@ -34,10 +34,11 @@ techniques.
 
 ### Requirements
 - PyTorch
-- or MatConvNet with MATLAB
 
 ### Launching the code
 First download the data with ``download_data.sh /path/to/save/data/``. Please copy ``decathlon_mean_std.pickle`` to the data folder. 
+
+- Attention: you should specify several direction arguments to practice by yourself: ``-expdir``: where to save results. ``--datadir``: where training data is located. ``--imdbdir``: where annotation is located, only for the 9 decathlon datasets, not suitable for CIFAR10. ``--source``: where the pre-trained model is located.
 
 To train a dataset from scratch:
 
