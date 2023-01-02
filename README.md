@@ -1,7 +1,15 @@
 ## Parametric families of deep neural networks with residual adapters [PyTorch + MatConvNet]
 
-Our Innovations:
-1. To add one more dataset CIFAR10 from https://www.cs.toronto.edu/~kriz/cifar.html, imdbfolder_cifar10 was created. CIFAR10 from the website has
+## Our Innovations
+
+- To add one more dataset CIFAR10 from https://www.cs.toronto.edu/~kriz/cifar.html, imdbfolder_cifar10 was created. CIFAR10 from the website has different format than the json files in data folder decathlon-1.0 (download_data.sh). New dataloaders were created in imdbfolder_cifar10 w/o using COCO module in imdbfolder_coco. Then the corresponding training files with cifar10 in file names (train_new_task_..._cifar10.py) were created. They were called when the performance of models on CIFAR10 were examed. CIFAR10 seemed to be a easy task that most models, w/ or w/o adapters, gave >98% top-1 accuracy.
+
+- Thanks to Palmetto cluster from Clemson University, we have shown several key points mentioned in the two papers, residual adapters for visual domains, below: 1) learning across domains: teacher models trained on ImageNet can fulfill the image classification tasks of other domains with just adapters learning. 2) ResNet w/ adapters outperformed training from scratch. 3) Parallel adapters could deliver comparable performance as series adapters but with simpler architecture and less computation. 4) Large weight decay was suitable for small datasets with less observations per class.
+
+- Several bugs in the original codes were fixed, including the encoding argument in pickle(), the alpha argument in add(), and the encoding and map_location arguments in torch.load(). The bugs were probably caused by the old version of the original codes.
+
+To practice by yourself, please compare this Readme with the original. Pay attention to the commands 'To train a dataset from scratch/with adapters'. The authors provided the off the shelf models in session of Pretrained networks.
+
 
 Backbone codes for the papers:
 - NIPS 2017: "Learning multiple visual domains with residual adapters", https://papers.nips.cc/paper/6654-learning-multiple-visual-domains-with-residual-adapters.pdf
