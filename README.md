@@ -38,7 +38,7 @@ techniques.
 ### Launching the code
 First download the data with ``download_data.sh /path/to/save/data/``. Please copy ``decathlon_mean_std.pickle`` to the data folder. 
 
-- Attention: you should specify several direction arguments to practice by yourself: ``-expdir``: where to save results. ``--datadir``: where training data is located. ``--imdbdir``: where annotation is located, only for the 9 decathlon datasets, not suitable for CIFAR10. ``--source``: where the pre-trained model is located.
+- Attention: you should specify several direction arguments to practice by yourself: ``-expdir``: where to save results. ``--datadir``: where training data is located. ``--imdbdir``: where annotation is located, only for the 9 decathlon datasets, not suitable for CIFAR10. ``--source``: where the pre-trained model is located. To practice on CIFAR10, use the train_new_task_... files with cifar10 in title names.
 
 To train a dataset from scratch:
 
@@ -98,4 +98,6 @@ For the parallel adapters:
         booktitle = CVPR,
         year = 2018,
         }
+        
 
+The whole repository is contributed by Jiancheng Zhu, Shangli Xu, and Chao Zhang. We are OMSA CS7643 students of Georgia Institute of Technology.
