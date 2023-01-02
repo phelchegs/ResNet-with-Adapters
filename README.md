@@ -10,6 +10,8 @@
 
 To practice by yourself, please compare this Readme with the original. Pay attention to the commands 'To train a dataset from scratch/with adapters'. The authors provided the off the shelf models in session of Pretrained networks.
 
+No training results are uploaded, please contact Jiancheng Zhu if further information is needed.
+
 
 Backbone codes for the papers:
 - NIPS 2017: "Learning multiple visual domains with residual adapters", https://papers.nips.cc/paper/6654-learning-multiple-visual-domains-with-residual-adapters.pdf
